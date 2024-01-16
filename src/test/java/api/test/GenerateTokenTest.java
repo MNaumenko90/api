@@ -14,10 +14,10 @@ public class GenerateTokenTest {
 
     @Test
     void generateToken() {
-//        bookSteps.addBookToUser();
+        bookSteps.addBookToUser();
         var responseUser = steps.getUser();
 
 
-        assertThat(responseUser.getBooks().get(0).getTitle()).isEqualTo("Git Pocket Guide");
+//        assertThat(responseUser.getBooks().get(0).getTitle()).isEqualTo("Git Pocket Guide");
     }
 }

@@ -13,7 +13,7 @@ public class UserSteps {
 
     public GetUserDto getUser() {
         return requests.get(requestWithToken(),
-                UserEndpoints.GET_USER.getEndpoints() + "c754adde-0dda-4856-b45d-cce96993989c").then().spec(ok())
+                UserEndpoints.GET_USER.getEndpoints() + "9d78c0f9-52dc-4ff7-a433-43b557960e3b").then().spec(ok())
                 .extract().body().as(GetUserDto.class);
     }
 }
