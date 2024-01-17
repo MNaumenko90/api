@@ -9,7 +9,7 @@ public class BookBuilders {
 
     public AddBookDto defaultBookDtoBuilder() {
         return AddBookDto.builder()
-                .userId("c754adde-0dda-4856-b45d-cce96993989c")
+                .userId("9d78c0f9-52dc-4ff7-a433-43b557960e3b")
                 .collectionOfIsbns(List.of(IsbnDto.builder().isbn("9781449325862").build()))
                 .build();
     }

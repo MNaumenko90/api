@@ -1,5 +1,6 @@
 package api.config;
 
+import api.dto.request.book.AddBookDto;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -30,5 +31,11 @@ public class Requests {
                 .spec(specRequest)
                 .when()
                 .get(endpoint);
+    }
+    public Response delete(RequestSpecification specRequest, String endpoint) {
+        return given()
+                .spec(specRequest)
+                .when()
+                .delete(endpoint);
     }
 }
