@@ -7,6 +7,7 @@ import api.endpoints.BookEndpoint;
 
 import static api.config.RequestService.requestWithToken;
 import static api.config.ResponseService.create;
+import static api.config.ResponseService.no_content;
 
 public class BookSteps {
 
@@ -15,6 +16,10 @@ public class BookSteps {
     public BookDto addBookToUser() {
         return requests.post(requestWithToken(), new BookBuilders().defaultBookDtoBuilder(), BookEndpoint.ADD_BOOK.getBook())
                 .then().spec(create()).extract().body().as(BookDto.class);
+    }
+    public BookDto deleteBookFromUser() {
+        return requests.delete(requestWithToken(), new BookBuilders().defaultBookDtoBuilder(), BookEndpoint.DELETE_BOOK.getBook())
+                .then().spec(no_content()).extract().body().as(BookDto.class);
     }
 
 }
